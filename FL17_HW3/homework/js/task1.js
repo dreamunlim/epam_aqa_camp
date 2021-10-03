@@ -10,8 +10,6 @@ class DepositProfit {
         this.earnedPerOneYear = 0;
         this.totalEarnedPerAllYears = 0;
         this.totalProfitAndAmount = 0;
-
-        this.startProgram();
     }
 
     startProgram() {
@@ -22,7 +20,7 @@ class DepositProfit {
             this.calcTotalProfitAndAmount();
         } catch (error) {
             this.showInvalidInputMessage(error);
-            depositProfit = new DepositProfit();
+            new DepositProfit().startProgram();
         }
     }
 
@@ -80,4 +78,4 @@ class DepositProfit {
     }
 }
 
-var depositProfit = new DepositProfit();
+new DepositProfit().startProgram();

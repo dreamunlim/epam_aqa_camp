@@ -1,5 +1,5 @@
 class CasinoRoulette {
-    constructor(skipPrompt = false) {
+    constructor() {
         this.currentUserAttempt = 0;
         this.maxUserAttempts = 3;
         this.maxPocketNumber = 8;
@@ -7,8 +7,11 @@ class CasinoRoulette {
         this.userSelectedPocket = 0;
         this.attemptPrizes = [100, 50, 25]; // 1st, 2nd, 3rd
         this.totalPrize = 0;
+        this.runGame = false;
+    }
 
-        this.runGame = skipPrompt || this.getUserConfirmation('Do you want to play a game?');
+    showGameStartPrompt() {
+        this.runGame = this.getUserConfirmation('Do you want to play a game?');
         if (this.runGame) {
             this.startGame();
         } else {
@@ -84,10 +87,6 @@ class CasinoRoulette {
             }
     }
 
-    resetGameOnNoAttemptsLeft() {
-        casinoRoulette = new CasinoRoulette(true);
-    }
-
     resetUserAttempts() {
         this.currentUserAttempt = -1;
     }
@@ -115,4 +114,4 @@ class CasinoRoulette {
     }
 }
 
-var casinoRoulette = new CasinoRoulette();
+new CasinoRoulette().showGameStartPrompt();

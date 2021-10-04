@@ -23,16 +23,6 @@ function reverseNumber(num) {
         reversedNumber += splitNumber[i];
     }
 
-    // add missing zeros to front
-    if (splitNumber[0] === 0) {
-        for (let i = 0; splitNumber[i] === 0; ++i) {
-            reversedNumber = '0' + reversedNumber;
-        }
-        // return as a string if reversed number has leading zeros
-        return negative ? '-' + reversedNumber : reversedNumber;
-    }
-        
-    // return as an integer number
     return negative ? -reversedNumber : reversedNumber;
 }
 

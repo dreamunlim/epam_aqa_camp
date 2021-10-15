@@ -1,7 +1,25 @@
 function getAge(date) {
     let today = new Date();
-    let age = today.getFullYear() - date.getFullYear();
-    return age;
+    let todaysMonth = today.getMonth();
+    let todaysDay = today.getDate();
+
+    let datesMonth = date.getMonth();
+    let datesDay = date.getDate();
+
+    let yearDifference = today.getFullYear() - date.getFullYear();
+    if (yearDifference >= 1) {
+        if (todaysMonth === datesMonth) {
+            if (todaysDay >= datesDay) {
+                return yearDifference;
+            } else {
+                return yearDifference - 1;
+            }
+        } else if (todaysMonth > datesMonth) {
+            return yearDifference;
+        } else {
+            return yearDifference - 1;
+        }
+    }
 }
 
 function getWeekDay(date) {

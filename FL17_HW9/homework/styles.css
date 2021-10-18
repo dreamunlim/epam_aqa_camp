@@ -1,0 +1,30 @@
+/* START: Task 1 Styles */
+div#task1 {
+    display: flex;
+    justify-content: center;
+}
+
+#task1 table td {
+    width: 100px;
+    height: 100px;
+}
+
+#task1 table, th, td {
+    border: 2px solid black;
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+    background-color: white;
+    empty-cells:show;
+}
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+
+/* END: Task 3 Styles */
